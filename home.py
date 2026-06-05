@@ -1,7 +1,7 @@
 import streamlit as st
 
 st.set_page_config(
-    page_title="Marketing Intelligence System",
+    page_title="AI Content Strategy System",
     page_icon="🧠",
     layout="centered"
 )
@@ -9,7 +9,7 @@ st.set_page_config(
 # ── HERO SECTION ──
 st.markdown("""
 <div style='text-align: center; padding: 2rem 0;'>
-    <h1 style='font-size: 2.8rem; font-weight: 800;'>🧠 Marketing Intelligence System</h1>
+    <h1 style='font-size: 2.8rem; font-weight: 800;'>AI Content Strategy System</h1>
     <p style='font-size: 1.2rem; color: gray;'>
         AI-powered tools for content strategy, SEO research, and social media analysis
     </p>
