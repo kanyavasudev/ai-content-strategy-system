@@ -613,13 +613,16 @@ Ready to copy and paste into a report.
 ---
 """
 
+            try:
                 response = client.models.generate_content(
                     model="gemini-2.5-flash",
                     contents=prompt
                 )
-
-                analysis = response.text
-
+                analysis = response.text  # or research/analysis
+            except Exception:
+                st.error("⚠️ AI analysis is temporarily busy. Please try again in a few minutes.")
+                st.stop()
+                
             st.markdown("---")
             st.markdown("### 🤖 AI Analysis & Recommendations")
             st.markdown(analysis)
