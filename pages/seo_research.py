@@ -164,12 +164,15 @@ Format:
 ---
 """
 
-            response = client.models.generate_content(
-                model="gemini-2.5-flash",
-                contents=prompt
-            )
-
-            research = response.text
+            try:
+                response = client.models.generate_content(
+                    model="gemini-2.5-flash",
+                    contents=prompt
+                )
+                brief = response.text  # or research/analysis
+            except Exception:
+                st.error("⚠️ AI analysis is temporarily busy. Please try again in a few minutes.")
+                st.stop()
 
         # ── OUTPUT ──
         st.markdown("---")
