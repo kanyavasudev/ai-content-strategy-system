@@ -33,25 +33,23 @@ st.markdown("---")
 # ── WHY I BUILT THIS ──
 st.markdown("### 💡 Why I Built This")
 st.markdown("""
-Most content teams use AI wrong.
+I built this because content research used to take me hours.
 
-They open ChatGPT and ask *"give me content ideas"* — and wonder why everything sounds generic.
+Finding the right keywords, understanding what's already out there, 
+figuring out why some posts work and others don't —
+it all took time that could have gone into actually creating.
 
-I built this system around a different belief:
+So I built a system that does the heavy research for you.
 
-> **Your thinking should drive AI. Not the other way around.**
+You bring your raw idea — even a half-formed thought.
+The tools help you understand it better, find the right angle,
+and turn it into something worth reading.
 
-Every tool here starts with YOUR insight, YOUR context, YOUR goal.
-AI then researches, expands, and makes it professional.
+No jargon. No overwhelm. Just clear, useful output
+that helps you create content that actually connects.
 
-The result is content strategy that actually sounds like you —
-backed by data, built for your audience, optimised for your goals.
-
-This system combines my two strongest skills:
-**content strategy** and **data analytics** —
-into one practical tool any marketer can use.
+Built for myself first. Sharing it because it might help you too.
 """)
-
 st.markdown("---")
 
 # ── 3 MODULE CARDS ──
