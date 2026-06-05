@@ -169,7 +169,7 @@ Format:
                     model="gemini-2.5-flash",
                     contents=prompt
                 )
-                brief = response.text  # or research/analysis
+                research = response.text  # or research/analysis
             except Exception:
                 st.error("⚠️ AI analysis is temporarily busy. Please try again in a few minutes.")
                 st.stop()
