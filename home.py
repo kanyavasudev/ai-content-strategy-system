@@ -11,7 +11,7 @@ st.markdown("""
 <div style='text-align: center; padding: 2rem 0;'>
     <h1 style='font-size: 2.8rem; font-weight: 800;'>AI Content Strategy System</h1>
     <p style='font-size: 1.2rem; color: gray;'>
-        AI-powered tools for SEO keyword research and daily marketing updates
+        AI-powered tools for SEO keyword research, daily updates and meta tags
     </p>
 </div>
 """, unsafe_allow_html=True)
@@ -76,7 +76,7 @@ def card(emoji, title, text, c1, c2, page, icon):
     st.page_link(page, label="Open Tool →", icon=icon)
 
 
-row1 = st.columns(2)
+row1 = st.columns(3)
 with row1[0]:
     card("🔍", "Keyword Research",
          "Enter a domain and pick Blog or On-page. Get a keyword set built for that goal, "
@@ -87,6 +87,12 @@ with row1[1]:
          "One click for today's Google AI, Google SEO and social media news, "
          "with what it means for you and what to do.",
          "#e76f51", "#f4a261", "pages/daily_news.py", "📰")
+
+with row1[2]:
+    card("🏷️", "Bulk Meta Generator",
+         "Upload a CSV of URLs and get SEO titles and descriptions "
+         "that fit Google's character limits.",
+         "#2d6a4f", "#52b788", "pages/meta_generator.py", "🏷️")
 
 st.markdown("---")
 
