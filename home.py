@@ -33,95 +33,73 @@ st.markdown("---")
 # ── WHY I BUILT THIS ──
 st.markdown("### 💡 Why I Built This")
 st.markdown("""
-Most content teams use AI wrong.
+I built this because content research used to take me hours.
 
-They open ChatGPT and ask *"give me content ideas"* — and wonder why everything sounds generic.
+Finding the right keywords, understanding what's already out there,
+figuring out why some posts work and others don't —
+it all took time that could have gone into actually creating.
 
-I built this system around a different belief:
+So I built a system that does the heavy research for you.
 
-> **Your thinking should drive AI. Not the other way around.**
+You bring your raw idea — even a half-formed thought.
+The tools help you understand it better, find the right angle,
+and turn it into something worth reading.
 
-Every tool here starts with YOUR insight, YOUR context, YOUR goal.
-AI then researches, expands, and makes it professional.
+No jargon. No overwhelm. Just clear, useful output
+that helps you create content that actually connects.
 
-The result is content strategy that actually sounds like you —
-backed by data, built for your audience, optimised for your goals.
-
-This system combines my two strongest skills:
-**content strategy** and **data analytics** —
-into one practical tool any marketer can use.
+Built for myself first. Sharing it because it might help you too.
 """)
-
 st.markdown("---")
 
-# ── 3 MODULE CARDS ──
+# ── TOOL CARDS ──
 st.markdown("### 🛠️ The Tools")
 st.markdown(" ")
 
-col1, col2, col3 = st.columns(3)
 
-with col1:
-    st.markdown("""
+def card(emoji, title, text, c1, c2, page, icon):
+    st.markdown(f"""
     <div style='
-        background: linear-gradient(135deg, #0077b6, #00b4d8);
+        background: linear-gradient(135deg, {c1}, {c2});
         border-radius: 16px;
         padding: 1.5rem;
         text-align: center;
         color: white;
         min-height: 220px;
     '>
-        <div style='font-size: 2.5rem;'>📝</div>
-        <h3 style='color: white; margin: 0.5rem 0;'>Content Brief Generator</h3>
-        <p style='font-size: 0.9rem; opacity: 0.9;'>
-            Turn your raw idea into a full content brief — with competitor gaps, 
-            platform recommendations, hooks, and SEO keywords.
-        </p>
+        <div style='font-size: 2.5rem;'>{emoji}</div>
+        <h3 style='color: white; margin: 0.5rem 0;'>{title}</h3>
+        <p style='font-size: 0.9rem; opacity: 0.9;'>{text}</p>
     </div>
     """, unsafe_allow_html=True)
     st.markdown(" ")
-    st.page_link("pages/content_brief.py", label="Open Tool →", icon="📝")
+    st.page_link(page, label="Open Tool →", icon=icon)
 
-with col2:
-    st.markdown("""
-    <div style='
-        background: linear-gradient(135deg, #7209b7, #b5179e);
-        border-radius: 16px;
-        padding: 1.5rem;
-        text-align: center;
-        color: white;
-        min-height: 220px;
-    '>
-        <div style='font-size: 2.5rem;'>🔍</div>
-        <h3 style='color: white; margin: 0.5rem 0;'>SEO Research Tool</h3>
-        <p style='font-size: 0.9rem; opacity: 0.9;'>
-            Enter a seed keyword and get similar keywords, difficulty ratings, 
-            TOFU/MOFU/BOFU mapping, competitor content, and blog titles.
-        </p>
-    </div>
-    """, unsafe_allow_html=True)
-    st.markdown(" ")
-    st.page_link("pages/seo_research.py", label="Open Tool →", icon="🔍")
 
-with col3:
-    st.markdown("""
-    <div style='
-        background: linear-gradient(135deg, #2d6a4f, #52b788);
-        border-radius: 16px;
-        padding: 1.5rem;
-        text-align: center;
-        color: white;
-        min-height: 220px;
-    '>
-        <div style='font-size: 2.5rem;'>📊</div>
-        <h3 style='color: white; margin: 0.5rem 0;'>Social Media Analyser</h3>
-        <p style='font-size: 0.9rem; opacity: 0.9;'>
-            Upload your LinkedIn analytics and get graphs, content diagnostics, 
-            deep insights, and an executive-ready report.
-        </p>
-    </div>
-    """, unsafe_allow_html=True)
-    st.markdown(" ")
-    st.page_link("pages/social_analysis.py", label="Open Tool →", icon="📊")
+row1 = st.columns(2)
+with row1[0]:
+    card("🔍", "Keyword Research",
+         "Enter a domain and pick Blog or On-page. Get a keyword set built for that goal, "
+         "with intent, funnel stage, difficulty and titles.",
+         "#7209b7", "#b5179e", "pages/keyword_research.py", "🔍")
+with row1[1]:
+    card("📰", "Daily Updates",
+         "One click for today's Google AI, Google SEO and social media news, "
+         "with what it means for you and what to do.",
+         "#e76f51", "#f4a261", "pages/daily_news.py", "📰")
+
+st.markdown(" ")
+row2 = st.columns(2)
+with row2[0]:
+    card("📝", "Content Brief Generator",
+         "Turn your raw idea into a full content brief — with competitor gaps, "
+         "platform recommendations, hooks, and SEO keywords.",
+         "#0077b6", "#00b4d8", "pages/content_brief.py", "📝")
+with row2[1]:
+    card("📊", "Social Media Analyser",
+         "Upload your LinkedIn analytics and get graphs, content diagnostics, "
+         "deep insights, and an executive-ready report.",
+         "#2d6a4f", "#52b788", "pages/social_analysis.py", "📊")
 
 st.markdown("---")
 
@@ -156,47 +134,27 @@ st.markdown("---")
 st.markdown("### ⚙️ Built With")
 
 col1, col2, col3, col4, col5 = st.columns(5)
-with col1:
-    st.markdown("""
-    <div style='text-align:center'>
-        <div style='font-size:2rem'>🐍</div>
-        <p><b>Python</b></p>
-    </div>""", unsafe_allow_html=True)
-with col2:
-    st.markdown("""
-    <div style='text-align:center'>
-        <div style='font-size:2rem'>🎈</div>
-        <p><b>Streamlit</b></p>
-    </div>""", unsafe_allow_html=True)
-with col3:
-    st.markdown("""
-    <div style='text-align:center'>
-        <div style='font-size:2rem'>🤖</div>
-        <p><b>Gemini AI</b></p>
-    </div>""", unsafe_allow_html=True)
-with col4:
-    st.markdown("""
-    <div style='text-align:center'>
-        <div style='font-size:2rem'>📊</div>
-        <p><b>Plotly</b></p>
-    </div>""", unsafe_allow_html=True)
-with col5:
-    st.markdown("""
-    <div style='text-align:center'>
-        <div style='font-size:2rem'>🐼</div>
-        <p><b>Pandas</b></p>
-    </div>""", unsafe_allow_html=True)
+for col, (emoji, name) in zip(
+    [col1, col2, col3, col4, col5],
+    [("🐍", "Python"), ("🎈", "Streamlit"), ("🤖", "Gemini AI"), ("📊", "Plotly"), ("🐼", "Pandas")],
+):
+    with col:
+        st.markdown(f"""
+        <div style='text-align:center'>
+            <div style='font-size:2rem'>{emoji}</div>
+            <p><b>{name}</b></p>
+        </div>""", unsafe_allow_html=True)
 
 st.markdown("---")
 
 # ── FOOTER ──
 st.markdown("""
 <div style='text-align: center; color: gray; padding: 1rem 0;'>
-    <p>Built by <a href='https://www.linkedin.com/in/kanya-v' target='_blank'>Kanya V</a> 
-    · Content Strategist · 
+    <p>Built by <a href='https://www.linkedin.com/in/kanya-v' target='_blank'>Kanya V</a>
+    · Content Strategist ·
     <a href='https://github.com/kanyavasudev' target='_blank'>GitHub</a></p>
     <p style='font-size: 0.8rem;'>
-        This tool was built to demonstrate how AI and data analytics 
+        This tool was built to demonstrate how AI and data analytics
         can work together to power smarter content strategy decisions.
     </p>
 </div>
