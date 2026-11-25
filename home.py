@@ -11,7 +11,7 @@ st.markdown("""
 <div style='text-align: center; padding: 2rem 0;'>
     <h1 style='font-size: 2.8rem; font-weight: 800;'>AI Content Strategy System</h1>
     <p style='font-size: 1.2rem; color: gray;'>
-        AI-powered tools for content strategy, SEO research, and social media analysis
+        AI-powered tools for SEO keyword research and daily marketing updates
     </p>
 </div>
 """, unsafe_allow_html=True)
@@ -87,19 +87,6 @@ with row1[1]:
          "One click for today's Google AI, Google SEO and social media news, "
          "with what it means for you and what to do.",
          "#e76f51", "#f4a261", "pages/daily_news.py", "📰")
-
-st.markdown(" ")
-row2 = st.columns(2)
-with row2[0]:
-    card("📝", "Content Brief Generator",
-         "Turn your raw idea into a full content brief — with competitor gaps, "
-         "platform recommendations, hooks, and SEO keywords.",
-         "#0077b6", "#00b4d8", "pages/content_brief.py", "📝")
-with row2[1]:
-    card("📊", "Social Media Analyser",
-         "Upload your LinkedIn analytics and get graphs, content diagnostics, "
-         "deep insights, and an executive-ready report.",
-         "#2d6a4f", "#52b788", "pages/social_analysis.py", "📊")
 
 st.markdown("---")
 
